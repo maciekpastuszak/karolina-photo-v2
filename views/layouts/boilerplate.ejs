@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="sesje zdjęciowe w Bielsku-Białej - dziecięce, rodzinne, ciąowe, komunijne, ślubne">
+        <title>Karolina Pastuszak Photography - Zapraszam do wspólnej przygody podczas sesji zdjęciowej - ciążowej, dziecięcej, rodzinnej, komunijnej, poślubnej</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">  <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/<%=style%>.css">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body class="d-flex flex-column vh-100">
+        <%- include('../partials/navbar')%>
+            <%- include('../partials/flash')%>
+                <main class='container-fluid mb-4'>
+                    <%- body %>
+                </main>
+                <%- include('../partials/footer')%>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+                <script src="/javascripts/validateForms.js"></script>
+                <script src="/javascripts/modal.js"></script>
+    </body>
+</html>

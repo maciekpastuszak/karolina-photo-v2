@@ -8,9 +8,23 @@
 </head>
 <body>
     <h1>Sesje dziecięce</h1>
-    <ul>
-        <% for (let zdjecie of dzieci) {%>
-        <li> <%= dzieci.title %></li>
+    <form action="/dzieci" method="POST">
+        <div>
+            <label for="title">Tytul</label>
+            <input type="text" id="title" name="kid[title]">
+        </div>
+        <div>
+            <label for="image">Zdjecie</label>
+            <input type="text" id="image" name="kid[image]">
+        </div>
+    <button>Dodaj</button>
+    </form>
+    
+        <% for (let kid of kids) {%>
+       <div>
+           <p><%=kid.title%></p>
+           <img src="<%=kid.image%>" alt="" style="max-width: 200px;">
+       </div>
         <% } %>
     </ul>
 </body>
