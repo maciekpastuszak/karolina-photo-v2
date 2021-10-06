@@ -66,6 +66,41 @@ await Kid.findByIdAndDelete(id);
 res.redirect('dzieci');
 })
 
+app.get('/', (req, res) => {
+    res.render('home', { style: 'app' });
+});
+
+app.get('/o_mnie', (req, res) => {
+    res.render('aboutMe', { style: 'aboutMe' });
+});
+
+app.get('/przed_sesja', (req, res) => {
+    res.render('beforePS', { style: 'beforePS' });
+});
+
+app.get('/voucher', (req, res) => {
+    res.render('voucher', { style: 'voucher' });
+});
+
+app.get('/cennik', (req, res) => {
+    res.render('pricing', { style: 'pricing' });
+});
+
+app.get('/kontakt', (req, res) => {
+    res.render('contact', { style: 'contact' });
+});
+
+
+app.all('*', (req, res, next) => {
+    next(new ExpressError('Ups, nie ma takiej strony. Spróbuj ponownie', 404))
+})
+
+app.use((err, req, res, next) => {
+    const { statusCode = 500 } = err;
+    if (!err.message) err.message = "Coś się nie udało"
+    res.status(statusCode).render('error', { err, style: 'app' })
+})
+
 app.listen(3000, () =>  {
     console.log('Port 3000 otwarty')
 })
