@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sesje dzieci</title>
-</head>
-<body>
+<% layout('layouts/boilerplate')%>
+
     <h1>Sesje dziecięce</h1>
     <form action="/dzieci" method="POST">
         <div>
@@ -19,6 +12,9 @@
         </div>
     <button>Dodaj</button>
     </form>
+    <form action="/dzieci<%=kids._id%>?_method=DELETE" method="POST">
+<button>Skasuj</button>
+    </form>
     
         <% for (let kid of kids) {%>
        <div>
@@ -27,5 +23,3 @@
        </div>
         <% } %>
     </ul>
-</body>
-</html>

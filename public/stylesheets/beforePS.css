@@ -1,0 +1,28 @@
+#beforePS {
+    border: none;
+    background-color: rgb(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.7);
+    text-align: justify;
+    padding: 0;
+}
+
+#beforePSimg {
+    height: 14vw;
+    object-fit: cover;
+}
+
+#beforePS header {
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    font-size: larger;
+}
+
+#beforePS h6 {
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+
+
