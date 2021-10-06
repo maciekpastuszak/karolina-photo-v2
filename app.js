@@ -3,6 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 const ejsMate = require('ejs-mate');
+const catchAsync = require('./utils/catchAsync')
 const Kid = require('./models/picture')
 const morgan = require('morgan');
 
@@ -48,11 +49,11 @@ app.get('dzieci/:id/edit', async (req,res) => {
     res.render('dzieci/edit', {kid});
 })
 
-app.post('/dzieci', async (req,res) => {
+app.post('/dzieci', catchAsync(async (req,res) => {
 const kid = new Kid(req.body.kid);
 await kid.save();
 res.redirect('dzieci')
-})
+}))
 
 app.put('/dzieci', async (req, res) => {
     const {id} = req.params
